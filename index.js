@@ -22,7 +22,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
 app.post('/proxy', (req, res) => {
-  const url = 'https://aslam-aisha-dev-ed.my.salesforce.com/services';
+  const url = 'https://your-salesforce-instance.salesforce.com/services/oauth2/token';
   request.post({ url, form: req.body }, (error, response, body) => {
     if (error) {
       return res.status(500).send(error);
